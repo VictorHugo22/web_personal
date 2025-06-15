@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Mi Portafolio</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet">
+
+
+</head>
+
+<body>
+    
+    <!-- Sección Hero -->
+    <header id="hero" class="hero">
+        <div class="container">
+            <img src="assets/img/crypto.jpeg" alt="cinta" class="hero-img" />
+        </div>
+    </header>
+
+    <!-- Sobre mí -->
+    <section id="sobre-mi" class="seccion sobre-mi">
+        <div class="container presentacion-container">
+            <div class="info">
+                <br><br>
+                <h1>VÍCTOR HUGO DE LA CRUZ DEL ÁNGEL</h1><br>
+                <p>Soy alumno de la carrera de Ing. en Sistemas Computacionales
+                    de la Escuela Superior de Cómputo (ESCOM) del Instituto Politécnico Nacional (IPN).
+                </p>
+                <div class="botones">
+                    <a href="assets/docs/CV_Hugo.pdf" download class="btn">CV</a>
+                    <a href="llave-publica.pdf" download class="btn">Llave pública</a>
+                </div>
+            </div>
+            <div class="card-presentacion">
+                <img src="assets/img/hipo.jpg" alt="Foto de perfil" class="foto-perfil" />
+            </div>
+        </div>
+    </section>
+
+    <!-- Formacióon Académica -->
+    <section id="formacion" class="seccion formacion">
+        <div class="container">
+            <h2>Formación Académica</h2><br><br><br>
+            <div class="timeline-horizontal">
+                <div class="event">
+                    <h3>Secundaria</h3>
+                    <span>Escuela Secundaria Oficial "Juana de Asbaje" 0680</span>
+                </div>
+                <div class="event">
+                    <h3>Preparatoria</h3>
+                    <span>CECYTEM Plantel Nicolás Romero II</span>
+                </div>
+                <div class="event">
+                    <h3>Universidad</h3>
+                    <span>Instituo Politécnico Nacional - ESCOM</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pasatiempo -->
+    <section id="pasatiempo" class="seccion pasat">
+        <div class="container">
+            <h2>Pasatiempos</h2>
+            <div class="pasatiempos-grid">
+                <div class="pasatiempo-card">
+                    <img src="assets/img/skate.webp" alt="Pasatiempo 1">
+                    <h3>Practicar Skate</h3>
+                    <p>Uno de mis pasatiempos favoritos es practicar Skate, aunque no siempre tengo la
+                        oportunidad de hacerlo con frecuencia, cada vez que me subo a la patineta lo
+                        disfruto.
+                    </p>
+                </div>
+                <div class="pasatiempo-card">
+                    <img src="assets/img/carretera.webp" alt="Videojuegos">
+                    <h3>Viajar a Hidalgo</h3>
+                    <p>Mi familia es originaria del Estado de Hidalgo, y cada vez que tenemos la oportunidad de
+                        ir, aprendo sobre su cultura y tradiciones.</p>
+                    <a href="#" class="video-link" onclick="abrirModal()">Video &gt;</a>
+                </div>
+                <div class="pasatiempo-card">
+                    <img src="assets/img/musica.webp" alt="Pasatiempo 3">
+                    <h3>Escuchar Música</h3>
+                    <p>Me ayuda a relajarme, concentrarme o simplemente disfrutar del momento. </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Curiosidades -->
+    <section id="curiosidades" class="seccion curio">
+        <div class="container">
+            <h2>Datos Curiosos de Criptografía</h2><br>
+            <div class="curiosidades">
+                <!-- Curiosidad 1 -->
+                <div class="curiosidad" onclick="abrirModalCurioso(1)">
+                    <img src="assets/img/enigmaK.jpg" alt="Curiosidad 1" class="curioso-img">
+                    <h3>Cryptanalysis of Commercial Enigma (1927)</h3>
+                </div>
+                <!-- Curiosidad 2 -->
+                <div class="curiosidad" onclick="abrirModalCurioso(2)">
+                    <img src="assets/img/curiosidad2.jpg" alt="Curiosidad 2" class="curioso-img">
+                    <h3>Turing-Welchman Bombe</h3>
+                </div>
+                <!-- Curiosidad 3 -->
+                <div class="curiosidad" onclick="abrirModalCurioso(3)">
+                    <img src="assets/img/curiosidad3.jpg" alt="Curiosidad 3" class="curioso-img">
+                    <h3>Sistemas Informáticos Ruggedizados</h3>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contacto -->
+    <section id="contacto" class="seccion cont">
+        <div class="container">
+            <h2>Contacto</h2>
+            <div class="contacto-info">
+                <div class="correo">
+                    <h3><i class="fas fa-envelope"></i> Correo institucional</h3>
+                    <p>vdelacruzd1601@alumno.ipn.mx</p>
+                </div>
+                <div class="correo">
+                    <h3><i class="fas fa-envelope-open-text"></i> Correo personal</h3>
+                    <p>victor_delacruz16@hotmail.com</p>
+                </div>
+            </div>
+            <div class="redes-sociales">
+                <h3>Redes</h3><br><br>
+                <a href="https://www.facebook.com/victorhugo.delacruz.77/" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                <a href="https://github.com/VictorHugo22" target="_blank"><i class="fab fa-github"></i></a>
+                
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer-navegacion">
+        <nav>
+            <ul>
+                <li><a href="#formacion">Formación Académica</a></li>
+                <li><a href="#pasatiempo">Pasatiempo Favorito</a></li>
+                <li><a href="#curiosidades">Datos Curiosos</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+    </footer>
+
+    <div id="modalVideo" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="cerrarModal">&times;</span>
+            <video id="videoPasatiempo" class="video-modal" controls>
+                <source src="assets/img/xantolo2.mp4" type="video/mp4">
+                Tu navegador no soporta videos.
+            </video>
+        </div>
+    </div>
+
+    <div id="modalCurioso" class="modal">
+        <div class="modal-contenido">
+            <span class="cerrar" id="cerrarCurioso">&times;</span>
+            <h2 id="tituloCurioso"></h2>
+            <p id="textoCurioso"></p>
+        </div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+    <script src="js/modalVideo.js"></script>
+    <script src="js/modalCurioso.js"></script>
+    
+
+</body>
+
+</html>
