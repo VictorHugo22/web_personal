@@ -480,6 +480,12 @@ textarea::placeholder {
     color: #ffffff;
 }
 
+.iconos-redes {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
 @media (min-width: 768px) {
     .contacto-info {
         flex-direction: row;
