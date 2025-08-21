@@ -4,169 +4,290 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mi Portafolio</title>
-    <link rel="stylesheet" href="css/styles.css" />
+    <title>Portafolio | Víctor Hugo de la Cruz</title>
+
+    <!-- Estilos -->
+    <link rel="stylesheet" href="css/style.css" />
+
+    <!-- Iconos -->
     <link href="https://use.fontawesome.com/releases/v6.5.0/css/all.css" rel="stylesheet">
+
+    <!-- Tipografía -->
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
-
-
-
 </head>
 
 <body>
 
-
+    <!-- Hero -->
     <header id="hero" class="hero">
-        <div class="container">
-            <img src="assets/img/crypto.jpeg" alt="cinta" class="hero-img" />
+        <div class="hero__container">
+            <img src="assets/img/crypto.jpeg" alt="cinta" class="hero__image hero__image--animated" />
         </div>
     </header>
 
-    <!-- Sobre mí -->
-    <section id="sobre-mi" class="seccion sobre-mi">
-        <div class="container presentacion-container">
-            <div class="info">
-                <h1 style="line-height: 1;">VÍCTOR HUGO</h1>
-                 <h2 style="line-height: 1;">DE LA CRUZ DEL ÁNGEL</h2>
-                <p style="text-align: justify;">Estudiante en etapa final de la carrera de Ingeniería en Sistemas
-                    Computacionales, con conocimientos en lenguajes de programación y fundamentos de
-                    redes y desarrollo web básico. Enfocado en ciberseguridad, con formación
-                    complementaria mediante cursos, asignaturas y actividades escolares.
-                    Experiencia previa en atención a clientes y resolución de problemas, con
-                    habilidades desarrolladas en comunicación y adaptabilidad. Busco integrarme
-                    a un equipo TI donde pueda iniciar mi desarrollo profesional en seguridad
-                    informática.
-                </p>
 
+
+    <main>
+        <!-- Sobre mí -->
+        <section id="about" class="about section">
+            <div class="about__container">
+                <article class="about__info">
+                    <!-- Nombre -->
+                    <div class="about__name">
+                        <h1 class="about__title">Víctor Hugo</h1>
+                        <h2 class="about__subtitle">De la Cruz del Ángel</h2>
+                    </div>
+
+                    <!-- Descripcion -->
+                    <div class="about__description-container">
+                        <p class="about__description">
+                            Estudiante en etapa final de la carrera de Ingeniería en Sistemas
+                            Computacionales, con conocimientos en lenguajes de programación y fundamentos de
+                            redes y desarrollo web básico. Enfocado en ciberseguridad, con formación
+                            complementaria mediante cursos, asignaturas y actividades escolares.
+                            Experiencia previa en atención a clientes y resolución de problemas, con
+                            habilidades desarrolladas en comunicación y adaptabilidad. Busco integrarme
+                            a un equipo TI donde pueda iniciar mi desarrollo profesional en seguridad
+                            informática.
+                        </p>
+                    </div>
+                </article>
+
+                <aside class="about__profile">
+                    <img src="assets/img/victor.jpg" alt="Foto de perfil" class="about__photo" />
+                    <div class="about__actions">
+                        <a href="assets/docs/CV_Victor.pdf" download class="btn btn--primary">Descargar CV</a>
+                    </div>
+                </aside>
             </div>
-            <div class="card-presentacion">
-                <img src="assets/img/victor.jpg" alt="Foto de perfil" class="foto-perfil" />
-                <div class="botones" style="text-align: center;">
-                    <a href="assets/docs/CV_Victor.pdf" download class="btn">Descargar CV</a>
-                </div>
-            </div>
+        </section>
 
-        </div>
-    </section>
-
-    <!-- Formacióon Académica -->
-    <section id="formacion" class="seccion formacion">
-        <div class="container">
-            <h2>Formación Académica</h2><br><br><br>
-            <div class="timeline-horizontal">
-                <div class="event">
-                    <h3>Secundaria</h3>
-                    <span>Escuela Secundaria Oficial "Juana de Asbaje" 0680</span>
-                </div>
-                <div class="event">
-                    <h3>Preparatoria</h3>
-                    <span>CECYTEM Plantel Nicolás Romero II</span>
-                </div>
-                <div class="event">
-                    <h3>Universidad</h3>
-                    <span>Instituo Politécnico Nacional - ESCOM</span>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Pasatiempo -->
-    <section id="pasatiempo" class="seccion pasat">
-        <div class="container">
-            <h2>Pasatiempos</h2>
-            <div class="pasatiempos-grid">
-                <div class="pasatiempo-card">
-                    <img src="assets/img/skate.webp" alt="Pasatiempo 1">
-                    <h3>Practicar Skate</h3>
-                    <p>Uno de mis pasatiempos favoritos es practicar Skate, aunque no siempre tengo la
-                        oportunidad de hacerlo con frecuencia, cada vez que me subo a la patineta lo
-                        disfruto.
-                    </p>
-                </div>
-                <div class="pasatiempo-card">
-                    <img src="assets/img/carretera.webp" alt="Videojuegos">
-                    <h3>Viajar a Hidalgo</h3>
-                    <p>Mi familia es originaria del Estado de Hidalgo, y cada vez que tenemos la oportunidad de
-                        ir, aprendo sobre su cultura y tradiciones.</p>
-                    <a href="#" class="video-link" onclick="abrirModal()">Video &gt;</a>
-                </div>
-                <div class="pasatiempo-card">
-                    <img src="assets/img/musica.webp" alt="Pasatiempo 3">
-                    <h3>Escuchar Música</h3>
-                    <p>Me ayuda a relajarme, concentrarme o simplemente disfrutar del momento. </p>
+        <!-- Formacióon Académica -->
+        <section id="education" class="education section">
+            <div class="education__container">
+                <h2 class="section__title">Formación Académica</h2>
+                <div class="timeline">
+                    <div class="timeline__event">
+                        <h3 class="timeline__title">Secundaria</h3>
+                        <p class="timeline__text">Escuela Secundaria Oficial "Juana de Asbaje" 0680</p>
+                    </div>
+                    <div class="timeline__event">
+                        <h3 class="timeline__title">Preparatoria</h3>
+                        <p class="timeline__text">CECYTEM Plantel Nicolás Romero II</p>
+                    </div>
+                    <div class="timeline__event">
+                        <h3 class="timeline__title">Universidad</h3>
+                        <p class="timeline__text">Instituto Politécnico Nacional - ESCOM</p>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Proyectos -->
-    <section id="proyectos" class="proyectos_esc">
-        <div class="container">
-            <h2>Proyectos</h2><br>
-            <div class="proyectos">
+        <!-- Pasatiempos -->
+        <section id="hobbies" class="hobbies section">
+            <div class="hobbies__container">
+                <h2 class="section__title">Pasatiempos</h2>
+                <div class="hobbies__grid">
+                    <article class="hobby-card">
+                        <img src="assets/img/skate.webp" alt="Patinando" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Practicar Skate</h3>
+                        <p class="hobby-card__text">Uno de mis pasatiempos favoritos es practicar Skate, aunque no
+                            siempre tengo la
+                            oportunidad de hacerlo con frecuencia, cada vez que me subo a la patineta lo
+                            disfruto.
+                        </p>
+                    </article>
 
-            </div>
-        </div>
-    </section>
-
-    <!-- Contacto -->
-    <section id="contacto" class="seccion cont">
-        <div class="container">
-            <h2>Contacto</h2>
-            <div class="contacto-info">
-                <div class="correo">
-                    <h3><i class="fas fa-envelope"></i> Correo institucional</h3>
-                    <p>vdelacruzd1601@alumno.ipn.mx</p>
+                    <article class="hobby-card">
+                        <img src="assets/img/carretera.webp" alt="Viaje a Hidalgo" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Viajar a Hidalgo</h3>
+                        <p class="hobby-card__text">Mi familia es originaria del Estado de Hidalgo, y cada vez que
+                            tenemos
+                            la oportunidad de
+                            ir, aprendo sobre su cultura y tradiciones.</p>
+                        <a href="#" class="hobby-card__link" onclick="abrirModal()">Video &gt;</a>
+                    </article>
+                    <article class="hobby-card">
+                        <img src="assets/img/musica.webp" alt="Música" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Escuchar Música</h3>
+                        <p class="hobby-card__text">Me ayuda a relajarme, concentrarme o simplemente disfrutar del
+                            momento.
+                        </p>
+                    </article>
                 </div>
-                <div class="correo">
-                    <h3><i class="fas fa-envelope-open-text"></i> Correo personal</h3>
-                    <p>victor_delacruz16@hotmail.com</p>
-                </div>
             </div>
-            <div class="redes-sociales">
-                <h3>Redes</h3>
-                <div class="iconos-sociales"><br>
-                    <a href="https://www.facebook.com/victorhugo.delacruz.77/" target="_blank"><i
-                            class="fab fa-facebook-f"></i></a>
-                    <a href="https://github.com/VictorHugo22" target="_blank"><i class="fab fa-github"></i></a>
-                </div>
-            </div>
-        </div>
-    </section>
+        </section>
 
-    <footer class="footer-navegacion">
-        <nav>
+        <!-- Proyectos -->
+        <section id="projects" class="projects section">
+            <div class="projects__container">
+                <h2 class="section__title">Proyectos</h2>
+                <div class="projects__grid">
+
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Certificados -->
+        <section id="certificados" class="certificados section">
+            <h2 class="section__title">Certificados</h2>
+            <div class="certificados__slider">
+                <!-- Slider de Certificados -->
+                <div class="certificados__grid">
+                    <!-- Tarjeta de certificado 1 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Cisco1_page-0001.jpg" alt="Certificado 1" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Dispositivos de Red y Configuración Inicial</h3>
+                        </div>
+                    </div>
+                    <!-- Tarjeta de certificado 2 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Cisco2_page-0001.jpg" alt="Certificado 2" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Introducción a la Ciberseguridad</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 3 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Cisco3_page-0001.jpg" alt="Certificado 3" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Conceptos básicos en redes</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 4 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-1.jpg" alt="Certificado 4" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Mastering Data Structures using C and C++</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 5 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-2.jpg" alt="Certificado 5" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Java Programming</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 6 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-3.jpg" alt="Certificado 6" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Python</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 7 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-4.jpg" alt="Certificado 7" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">VHDL</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 8 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-5.jpg" alt="Certificado 8" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">PIC Microcontroller</h3>
+                        </div>
+                    </div>
+
+                    <!-- Tarjeta de certificado 9 -->
+                    <div class="certificado-card">
+                        <div class="certificado-card__image">
+                            <img src="assets/img/Udemy-6.jpg" alt="Certificado 9" />
+                        </div>
+                        <div class="certificado-card__content">
+                            <h3 class="certificado-card__title">Networking Fundamentals</h3>
+                        </div>
+                    </div>
+                    <!-- Añadir más certificados aquí -->
+                </div>
+
+                <!-- Puntos de navegación -->
+                <div class="certificados__nav">
+                    <span class="certificados__dot active"></span>
+                    <span class="certificados__dot"></span>
+                    <span class="certificados__dot"></span>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- Contacto -->
+        <section id="contact" class="contact section">
+            <div class="contact__container">
+                <h2 class="section__title">Contacto</h2>
+                <div class="contact__info">
+                    <div class="contact__item">
+                        <h3><i class="fas fa-envelope"></i> Correo institucional</h3>
+                        <p>vdelacruzd1601@alumno.ipn.mx</p>
+                    </div>
+                    <div class="contact__item">
+                        <h3><i class="fas fa-envelope-open-text"></i> Correo personal</h3>
+                        <p>victor_delacruz16@hotmail.com</p>
+                    </div>
+                </div>
+                <div class="contact__social">
+                    <h3>Redes</h3>
+                    <div class="iconos-sociales"><br>
+                        <a href="https://www.facebook.com/victorhugo.delacruz.77/" target="_blank"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="https://github.com/VictorHugo22" target="_blank"><i class="fab fa-github"></i></a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <nav class="footer__nav">
             <ul>
-                <li><a href="#formacion">Formación Académica</a></li>
-                <li><a href="#pasatiempo">Pasatiempo Favorito</a></li>
-                <li><a href="#curiosidades">Datos Curiosos</a></li>
-                <li><a href="#contacto">Contacto</a></li>
-                <li><a href="#sobre-mi" title="Inicio"><i class="fas fa-home"></i></a></li>
+                <li><a href="#education">Formación Académica</a></li>
+                <li><a href="#hobbies">Pasatiempo Favorito</a></li>
+                <li><a href="#projects">Projectos</a></li>
+                <li><a href="#contact">Contacto</a></li>
+                <li><a href="#about" title="Inicio"><i class="fas fa-home"></i></a></li>
             </ul>
         </nav>
     </footer>
 
-    <div id="modalVideo" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar" id="cerrarModal">&times;</span>
-            <video id="videoPasatiempo" class="video-modal" controls>
+    <!-- Modal Video -->
+    <div id="modalVideo" class="modal modal--video">
+        <div class="modal__content">
+            <span class="modal__close" id="cerrarModal">&times;</span>
+            <video id="videoPasatiempo" class="modal__video" controls>
                 <source src="assets/img/xantolo2.mp4" type="video/mp4">
                 Tu navegador no soporta videos.
             </video>
         </div>
     </div>
 
-    <div id="modalCurioso" class="modal">
-        <div class="modal-contenido">
-            <span class="cerrar" id="cerrarCurioso">&times;</span>
-            <h2 id="tituloCurioso"></h2>
-            <p id="textoCurioso"></p>
-        </div>
-    </div>
 
     <script src="js/script.js"></script>
     <script src="js/modalVideo.js"></script>
-    <script src="js/modalCurioso.js"></script>
+    <script src="js/certificados.js"></script>
 
 
 </body>

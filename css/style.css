@@ -1,0 +1,520 @@
+/* ========================================================
+    Global Reset & Basic Styles
+======================================================== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    background-color: #000000;
+    color: #e5e5e5;
+    line-height: 1.6;
+    transition: background 0.3s ease, color 0.3s ease;
+    padding-bottom: 80px;
+}
+
+h1, h2 {
+    color: #ffffff;
+    margin-bottom: 1rem;
+}
+
+a {
+    color: #60a5fa;
+    text-decoration: none;
+}
+
+/* ========================================================
+    Section Styles
+======================================================== */
+.section {
+    padding: 4rem 0;
+    background-color: #18181b48;
+    margin: 55px 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+}
+
+.section__title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+/* ========================================================
+    Hero Section
+======================================================== */
+.hero {
+    position: relative;
+    height: 80px;
+    width: 100vw;
+    overflow: hidden;
+}
+
+.hero__image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position: left center;
+}
+
+.hero__image--animated {
+    animation: fadeInUp 2s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ========================================================
+    Button Styles
+======================================================== */
+.btn {
+    display: inline-block;
+    background-color: #3b82f6;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 999px;
+    font-weight: bold;
+    transition: background 0.3s ease, transform 0.3s ease;
+    box-shadow: 0 4px 12px rgba(59,130,246,0.4);
+    cursor: pointer;
+    margin-bottom: 3rem;
+}
+
+.btn:hover {
+    background-color: #2563eb;
+    transform: scale(1.05);
+    box-shadow: 0 6px 18px rgba(37,99,235,0.5);
+}
+
+/* ========================================================
+    About Section
+======================================================== */
+.about {
+    background-color: #000000;
+    color: #ffffff;
+    width: 80%;
+    margin: auto;
+    margin-top: 40px;
+    border-radius: 10px;
+}
+
+.about__container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1rem;
+}
+
+.about__info {
+    flex: 1 1 60%;
+    max-width: 60%;
+}
+
+.about__title {
+    font-size: 2.7rem;
+    font-weight: bold;
+    margin-bottom: 0;
+    color: #000;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.about__subtitle {
+    font-size: 1.8rem;
+    color: #3a3535dd;
+    margin-bottom: 2rem;
+    margin-right: 1rem;
+    text-align: right;
+}
+
+.about__description {
+    text-align: justify;
+    font-size: 14px;
+}
+
+
+.about__profile {
+    text-align: center;
+    flex: 2 1 30%;
+    background-color: #000000;
+    max-width: 300px;
+    border-radius: 10px;
+}
+
+.about__photo {
+    width: 170px;
+    height: 170px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+    margin-top: 3rem;
+}
+.about__name{
+    background-color: #ffffff;
+    max-width: 400px; /* Limita el ancho máximo */
+    border-radius: 10px;
+    margin-left: 12rem;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+.about__description-container {
+    background-color: #ffffff;
+    max-width: 700px;
+    color: #000;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgb(255, 255, 255);
+}
+
+/* ========================================================
+    Education Section (Timeline)
+======================================================== */
+
+.education__container {
+    background-color: #ffffff;
+}
+
+
+
+.timeline {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-top: 2rem;
+    padding: 1rem;
+    position: relative;
+    border-top: 4px solid #60a5fa;
+}
+
+.timeline__event {
+    position: relative;
+    text-align: center;
+    width: 25%;
+}
+
+.timeline__event::before {
+    content: '';
+    position: absolute;
+    top: -12px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 20px;
+    height: 20px;
+    background-color: #60a5fa;
+    border-radius: 50%;
+    border: 2px solid white;
+}
+
+.timeline__title {
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+.timeline__text {
+    margin: 0;
+    color: #ccc;
+}
+
+/* ========================================================
+    Hobbies Section
+======================================================== */
+.hobbies__grid {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.hobby-card {
+    background-color: #1e1e1e;
+    color: white;
+    border-radius: 12px;
+    padding: 1rem;
+    width: 300px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hobby-card:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 8px 16px rgba(255,255,255,0.2);
+}
+
+.hobby-card__image {
+    width: 90%;
+    border-radius: 8px;
+    margin-bottom: 0.75rem;
+}
+
+.hobby-card__title {
+    margin: 0.5rem 0;
+    font-size: 1.2rem;
+}
+
+.hobby-card__text {
+    font-size: 0.9rem;
+    color: #ccc;
+}
+
+/* ========================================================
+    Projects Section
+======================================================== */
+.projects__grid {
+    display: grid;
+    gap: 1rem;
+}
+
+.proyecto {
+    background-color: #1f1f23;
+    padding: 1rem;
+    border-radius: 8px;
+    color: #d1d5db;
+    transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.proyecto:hover {
+    transform: scale(1.02);
+    background-color: #2a2a30;
+}
+
+/* ========================================================
+    Contact Section
+======================================================== */
+.contact__container {
+    text-align: center;
+}
+
+.contact__info {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.contact__item h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact__social {
+    margin-top: 1.5rem;
+}
+
+.social-icons {
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+    font-size: 1.8rem;
+}
+
+.social-icons a {
+    color: #8ab4f8;
+    transition: transform 0.2s ease, color 0.3s ease;
+}
+
+.social-icons a:hover {
+    transform: scale(1.2);
+    color: #fff;
+}
+
+@media (min-width: 768px) {
+    .contact__info {
+        flex-direction: row;
+        justify-content: center;
+    }
+}
+
+
+
+/* ========================================================
+    Certificados
+======================================================== */
+
+.certificados {
+    background-color: #000000;
+    padding: 3rem 1rem;
+    color: #fff;
+    text-align: center;
+}
+
+.certificados__slider {
+    position:relative;
+    width: 82%;
+    overflow: hidden;
+    margin:auto;
+}
+
+.certificados__grid {
+    display: flex;
+    gap: 2rem;
+    width: max-content;
+    transition: transform 0.1s linear; /* Suaviza el movimiento */
+    margin-left: 1rem;
+    margin-top: 1rem;
+}
+
+.certificado-card {
+    background-color: #1a1a1a00;
+    color: white;
+    width: 450px;
+    height: 400px;
+    border-radius: 16px;
+    box-shadow: 0 0 3px rgb(255, 255, 255);
+    overflow: hidden;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    transition: transform 0.5s ease;
+}
+
+.certificado-card:hover {
+    transform: scale(1.05); /* Efecto al pasar el ratón */
+}
+
+.certificado-card__image img {
+    width: 100%;
+    height: 300px;
+    margin-top: 20px;
+    object-fit: cover; /* Asegura que la imagen se ajuste bien */
+}
+
+.certificado-card__content {
+    padding: 0;
+
+}
+
+.certificado-card__title {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 1rem;
+}
+
+/* Estilo para los puntos de navegación */
+.certificados__nav {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.certificados__dot {
+    width: 10px;
+    height: 10px;
+    background-color: #fff;
+    border-radius: 50%;
+    margin-top: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.certificados__dot.active {
+    background-color: #2563eb; /* Resalta el punto activo */
+}
+
+/* Responsividad para pantallas pequeñas */
+@media (max-width: 768px) {
+    .certificados__grid {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .certificado-card {
+        width: 80%;
+        height: auto;
+    }
+}
+
+
+
+/* ========================================================
+    Footer Section
+======================================================== */
+.footer {
+    background-color: #111;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    z-index: 1000;
+    box-shadow: 0 -2px 10px rgba(0,0,0,0.5);
+}
+
+.footer__nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.footer__nav a {
+    color: #fff;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.footer__nav a:hover {
+    color: #1cacff;
+}
+
+/* ========================================================
+    Modal Section
+======================================================== */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1000;
+    inset: 0;
+    background-color: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__content {
+    position: relative;
+    background-color: #1f1f1f;
+    padding: 1rem;
+    border-radius: 12px;
+    max-width: 90%;
+    max-height: 90%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.modal__video {
+    max-height: 80vh;
+    border-radius: 8px;
+}
+
+.modal__close {
+    position: absolute;
+    top: 10px;
+    right: 20px;
+    font-size: 2rem;
+    color: white;
+    cursor: pointer;
+}
