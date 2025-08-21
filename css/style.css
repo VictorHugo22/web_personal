@@ -282,7 +282,7 @@ a {
     Projects Section
 ======================================================== */
 .projects__grid {
-    display: grid;
+    display: flex;
     gap: 1rem;
 }
 
@@ -298,6 +298,70 @@ a {
     transform: scale(1.02);
     background-color: #2a2a30;
 }
+
+
+
+.proyectos-lista {
+    width: 20%;
+    background-color: #333;
+    padding: 20px;
+    border-radius: 8px;
+}
+
+.proyectos-lista ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.proyecto-btn {
+    background-color: #555;
+    color: white;
+    border: none;
+    padding: 10px;
+    width: 100%;
+    text-align: left;
+    cursor: pointer;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+
+.proyecto-btn:hover {
+    background-color: #007BFF;
+}
+
+.proyecto-imagen {
+    width: 40%;
+}
+
+.proyecto-imagen img {
+    width: 80%;
+    border-radius: 8px;
+}
+
+.proyecto-descripcion{
+    background-color: #ffffff;
+}
+
+.proyecto-descripcion-info {
+    width: 40%;
+    text-align: left;
+    padding: 10px;
+}
+
+.proyecto-descripcion button {
+    background-color: #007BFF;
+    color: white;
+    border: none;
+    padding: 10px;
+    margin-top: 20px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.descripcion button:hover {
+    background-color: #0056b3;
+}
+
 
 /* ========================================================
     Contact Section
