@@ -32,118 +32,109 @@
         <section id="about" class="about section">
             <div class="about__container">
                 <article class="about__info">
-                    <!-- Nombre -->
+                    <span class="about__eyebrow">Hola, soy</span>
+
                     <div class="about__name">
                         <h1 class="about__title">Víctor Hugo</h1>
                         <h2 class="about__subtitle">De la Cruz del Ángel</h2>
                     </div>
 
-                    <!-- Descripcion -->
+                    <p class="about__role">
+                        Ingeniero en Sistemas Computacionales · Enfoque en ciberseguridad y desarrollo web
+                    </p>
+
                     <div class="about__description-container">
                         <p class="about__description">
-                            Estudiante en etapa final de la carrera de Ingeniería en Sistemas
-                            Computacionales, con conocimientos en lenguajes de programación y fundamentos de
-                            redes y desarrollo web básico. Enfocado en ciberseguridad, con formación
-                            complementaria mediante cursos, asignaturas y actividades escolares.
-                            Experiencia previa en atención a clientes y resolución de problemas, con
-                            habilidades desarrolladas en comunicación y adaptabilidad. Busco integrarme
-                            a un equipo TI donde pueda iniciar mi desarrollo profesional en seguridad
-                            informática.
+                            Recién egresado con interés en crear soluciones tecnológicas funcionales,
+                            fortalecer mis habilidades técnicas y desarrollarme profesionalmente
+                            dentro del área de TI.
                         </p>
+                    </div>
+
+                    <div class="about__actions">
+                        <a href="assets/docs/CV_Victor.pdf" download class="btn btn--primary">
+                            Descargar CV
+                        </a>
+                        <a href="#contact" class="btn btn--secondary">
+                            Contacto
+                        </a>
                     </div>
                 </article>
 
                 <aside class="about__profile">
-                    <img src="assets/img/victor.jpg" alt="Foto de perfil" class="about__photo" />
-                    <div class="about__actions">
-                        <a href="assets/docs/CV_Victor.pdf" download class="btn btn--primary">Descargar CV</a>
+                    <div class="about__photo-wrapper">
+                        <img src="assets/img/victor.jpg" alt="Foto de perfil de Víctor Hugo" class="about__photo">
                     </div>
                 </aside>
             </div>
         </section>
 
-        <!-- Formacióon Académica -->
-        <section id="education" class="education section">
-            <div class="education__container">
-                <h2 class="section__title">Formación Académica</h2>
-                <div class="timeline">
-                    <div class="timeline__event">
-                        <h3 class="timeline__title">Secundaria</h3>
-                        <p class="timeline__text">Escuela Secundaria Oficial "Juana de Asbaje" 0680</p>
-                    </div>
-                    <div class="timeline__event">
-                        <h3 class="timeline__title">Preparatoria</h3>
-                        <p class="timeline__text">CECYTEM Plantel Nicolás Romero II</p>
-                    </div>
-                    <div class="timeline__event">
-                        <h3 class="timeline__title">Universidad</h3>
-                        <p class="timeline__text">Instituto Politécnico Nacional - ESCOM</p>
-                    </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- Pasatiempos -->
-        <section id="hobbies" class="hobbies section">
-            <div class="hobbies__container">
-                <h2 class="section__title">Pasatiempos</h2>
-                <div class="hobbies__grid">
-                    <article class="hobby-card">
-                        <img src="assets/img/skate.webp" alt="Patinando" class="hobby-card__image">
-                        <h3 class="hobby-card__title">Practicar Skate</h3>
-                        <p class="hobby-card__text">Uno de mis pasatiempos favoritos es practicar Skate, aunque no
-                            siempre tengo la
-                            oportunidad de hacerlo con frecuencia, cada vez que me subo a la patineta lo
-                            disfruto.
-                        </p>
-                    </article>
-
-                    <article class="hobby-card">
-                        <img src="assets/img/carretera.webp" alt="Viaje a Hidalgo" class="hobby-card__image">
-                        <h3 class="hobby-card__title">Viajar a Hidalgo</h3>
-                        <p class="hobby-card__text">Mi familia es originaria del Estado de Hidalgo, y cada vez que
-                            tenemos
-                            la oportunidad de
-                            ir, aprendo sobre su cultura y tradiciones.</p>
-                        <a href="#" class="hobby-card__link" onclick="abrirModal()">Video &gt;</a>
-                    </article>
-                    <article class="hobby-card">
-                        <img src="assets/img/musica.webp" alt="Música" class="hobby-card__image">
-                        <h3 class="hobby-card__title">Escuchar Música</h3>
-                        <p class="hobby-card__text">Me ayuda a relajarme, concentrarme o simplemente disfrutar del
-                            momento.
-                        </p>
-                    </article>
-                </div>
-            </div>
-        </section>
 
         <!-- Proyectos -->
         <section id="projects" class="projects section">
             <div class="projects__container">
                 <h2 class="section__title">Proyectos</h2>
+
                 <div class="projects__grid">
                     <!-- Lista de proyectos -->
-                    <div class="proyectos-lista">
+                    <aside class="proyectos-lista">
                         <ul>
-                            <li><button class="proyecto-btn" data-proyecto="1">Proyecto 1</button></li>
-                            <li><button class="proyecto-btn" data-proyecto="2">Proyecto 2</button></li>
-                            <li><button class="proyecto-btn" data-proyecto="3">Proyecto 3</button></li>
-                            <li><button class="proyecto-btn" data-proyecto="4">Proyecto 4</button></li>
+                            <li>
+                                <button class="proyecto-btn selected" data-proyecto="0">
+                                    Trabajo de Titulación <br>(En proceso)
+                                </button>
+                            </li>
+                            <li>
+                                <button class="proyecto-btn" data-proyecto="1">
+                                    Criptografía
+                                </button>
+                            </li>
                         </ul>
+                    </aside>
+
+                    <!-- Galería del proyecto -->
+                    <div class="proyecto-imagen">
+                        <div class="proyecto-imagen__viewer">
+                            <button id="prev-image" class="gallery-btn" aria-label="Imagen anterior">
+                                &#10094;
+                            </button>
+
+                            <img id="proyecto-imagen-img" alt="Imagen del proyecto">
+
+                            <button id="next-image" class="gallery-btn" aria-label="Imagen siguiente">
+                                &#10095;
+                            </button>
+                        </div>
+
+                        <p id="proyecto-imagen-contador" class="proyecto-imagen__contador"></p>
                     </div>
 
-                    <!-- Contenido del proyecto (Imagen y Descripción) -->
-                    <div class="proyecto-imagen">
-                        <img id="proyecto-imagen-img" src="assets/img/Udemy-1.jpg" alt="Imagen del Proyecto">
-                    </div>
-                    <div class="proyecto-descrpcion">
-                        <p id="proyecto-descripcion-info">Descripción del Proyecto 1.</p>
-                        <button id="next-desc">→</button>
+                    <!-- Información del proyecto -->
+                    <div class="proyecto__informacion">
+                        <div class="proyecto__informacion--descr" id="proyecto-descripcion-info"></div>
+
+                        <div class="proyecto__informacion__footer">
+                            <span id="proyecto-detalle-contador" class="proyecto-detalle-contador"></span>
+
+                            <button id="next-desc" class="btn-float" aria-label="Siguiente descripción">
+                                <span class="btn-float__icon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" fill="none"
+                                        stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                        stroke-linejoin="round">
+                                        <path d="M9 18l6-6-6-6" />
+                                    </svg>
+                                </span>
+                            </button>
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
+
+
+
+
 
         <!-- Sección de Certificados -->
         <section id="certificados" class="certificados section">
@@ -252,26 +243,113 @@
         </section>
 
 
+        <!-- Pasatiempos -->
+        <section id="hobbies" class="hobbies section">
+            <div class="hobbies__container">
+                <h2 class="section__title">Pasatiempos</h2>
+                <div class="hobbies__grid">
+                    <article class="hobby-card">
+                        <img src="assets/img/skate.webp" alt="Patinando" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Practicar Skate</h3>
+                        <p class="hobby-card__text">Uno de mis pasatiempos favoritos es practicar Skate, aunque no
+                            siempre tengo la
+                            oportunidad de hacerlo con frecuencia, cada vez que me subo a la patineta lo
+                            disfruto.
+                        </p>
+                    </article>
+
+                    <article class="hobby-card">
+                        <img src="assets/img/carretera.webp" alt="Viaje a Hidalgo" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Viajar a Hidalgo</h3>
+                        <p class="hobby-card__text">Mi familia es originaria del Estado de Hidalgo, y cada vez que
+                            tenemos
+                            la oportunidad de
+                            ir, aprendo sobre su cultura y tradiciones.</p>
+                        <a href="#" class="hobby-card__link" onclick="abrirModal()">Video &gt;</a>
+                    </article>
+                    <article class="hobby-card">
+                        <img src="assets/img/musica.webp" alt="Música" class="hobby-card__image">
+                        <h3 class="hobby-card__title">Escuchar Música</h3>
+                        <p class="hobby-card__text">Me ayuda a relajarme, concentrarme o simplemente disfrutar del
+                            momento.
+                        </p>
+                    </article>
+                </div>
+            </div>
+        </section>
+
+
         <!-- Contacto -->
         <section id="contact" class="contact section">
             <div class="contact__container">
                 <h2 class="section__title">Contacto</h2>
+                <p class="contact__hint">
+                    Haz clic en un correo para redactar un mensaje o copia la dirección.
+                </p>
+
                 <div class="contact__info">
                     <div class="contact__item">
                         <h3><i class="fas fa-envelope"></i> Correo institucional</h3>
-                        <p>vdelacruzd1601@alumno.ipn.mx</p>
+                        <a href="mailto:vdelacruzd1601@alumno.ipn.mx?subject=Contacto%20desde%20tu%20portafolio"
+                            class="contact__mail-link">
+                            vdelacruzd1601@alumno.ipn.mx
+                        </a>
+                        <button class="contact__copy" data-copy="vdelacruzd1601@alumno.ipn.mx">
+                            Copiar
+                        </button>
                     </div>
+
                     <div class="contact__item">
                         <h3><i class="fas fa-envelope-open-text"></i> Correo personal</h3>
-                        <p>victor_delacruz16@hotmail.com</p>
+                        <a href="mailto:victor_delacruz16@hotmail.com?subject=Contacto%20desde%20tu%20portafolio"
+                            class="contact__mail-link">
+                            victor_delacruz16@hotmail.com
+                        </a>
+                        <button class="contact__copy" data-copy="victor_delacruz16@hotmail.com">
+                            Copiar
+                        </button>
                     </div>
+
+                    <!-- Ejemplo de tercer correo -->
+                    <!--
+            <div class="contact__item">
+                <h3><i class="fas fa-envelope"></i> Correo alternativo</h3>
+                <a href="mailto:tu_correo@dominio.com?subject=Contacto%20desde%20tu%20portafolio"
+                    class="contact__mail-link">
+                    tu_correo@dominio.com
+                </a>
+                <button class="contact__copy" data-copy="tu_correo@dominio.com">
+                    Copiar
+                </button>
+            </div>
+            -->
+
+                    <!-- Ejemplo de cuarto correo -->
+                    <!--
+            <div class="contact__item">
+                <h3><i class="fas fa-envelope"></i> Correo de trabajo</h3>
+                <a href="mailto:otro_correo@dominio.com?subject=Contacto%20desde%20tu%20portafolio"
+                    class="contact__mail-link">
+                    otro_correo@dominio.com
+                </a>
+                <button class="contact__copy" data-copy="otro_correo@dominio.com">
+                    Copiar
+                </button>
+            </div>
+            -->
                 </div>
+
+                <!-- Redes ocultas por ahora -->
                 <div class="contact__social">
                     <h3>Redes</h3>
-                    <div class="iconos-sociales"><br>
-                        <a href="https://www.facebook.com/victorhugo.delacruz.77/" target="_blank"><i
-                                class="fab fa-facebook-f"></i></a>
-                        <a href="https://github.com/VictorHugo22" target="_blank"><i class="fab fa-github"></i></a>
+                    <div class="iconos-sociales">
+                        <a href="https://www.facebook.com/victorhugo.delacruz.77/" target="_blank"
+                            rel="noopener noreferrer">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://github.com/VictorHugo22" target="_blank" rel="noopener noreferrer">
+                            <i class="fab fa-github"></i>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -305,6 +383,8 @@
     <script src="js/script.js"></script>
     <script src="js/modalVideo.js"></script>
     <script src="js/certificados.js"></script>
+    <script src="js/proyecto-btn.js"></script>
+    <script src="js/contacto.js"></script>
 
 
 </body>
