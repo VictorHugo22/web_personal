@@ -1,34 +1,111 @@
 const grid = document.querySelector('.certificados__grid');
-const cards = document.querySelectorAll('.certificado-card'); // Todas las tarjetas originales
-const totalCards = cards.length; // Número total de tarjetas
-const cardWidth = cards[0].offsetWidth; // Ancho de una tarjeta
+let animationId = null;
+let currentOffset = 0;
+let speed = 0.30;
 
-// Clonamos las tarjetas y las agregamos al final para crear un ciclo infinito
+function getOriginalCards() {
+    return Array.from(
+        grid.querySelectorAll('.certificado-card:not(.certificado-card--clone)')
+    );
+}
+
+function removeClones() {
+    grid.querySelectorAll('.certificado-card--clone').forEach(clone => clone.remove());
+}
+
 function cloneCards() {
-    cards.forEach(card => {
-        const clone = card.cloneNode(true); // Clonamos cada tarjeta
-        grid.appendChild(clone); // Agregamos la tarjeta clonada al final
+    const originals = getOriginalCards();
+    originals.forEach(card => {
+        const clone = card.cloneNode(true);
+        clone.classList.add('certificado-card--clone');
+        grid.appendChild(clone);
     });
 }
 
-// Función para mover la galería
-let currentOffset = 0;
-function moveGallery() {
-    currentOffset -= 1; // Moverse un pixel hacia la izquierda
-    grid.style.transform = `translateX(${currentOffset}px)`; // Aplicamos el desplazamiento
+function getOriginalWidth() {
+    const originals = getOriginalCards();
+    if (!originals.length) return 0;
 
-    // Cuando lleguemos al final, reseteamos el ciclo
-    if (Math.abs(currentOffset) >= cardWidth * totalCards) {
-        currentOffset = 0; // Reiniciamos el desplazamiento
-        grid.style.transition = "none"; // Desactivamos la transición para el reinicio
-        grid.style.transform = `translateX(${currentOffset}px)`; // Colocamos el primer elemento
-    } else {
-        grid.style.transition = "transform 0.001s linear"; // Reactivamos la transición
-    }
+    const styles = window.getComputedStyle(grid);
+    const gap = parseFloat(styles.gap) || 0;
 
-    requestAnimationFrame(moveGallery); // Llamamos a la función para el siguiente frame
+    let totalWidth = 0;
+
+    originals.forEach((card, index) => {
+        totalWidth += card.getBoundingClientRect().width;
+        if (index < originals.length - 1) {
+            totalWidth += gap;
+        }
+    });
+
+    return totalWidth;
 }
 
-// Iniciar el desplazamiento y clonación
-cloneCards(); // Clonamos las tarjetas al cargar la página
-moveGallery(); // Comenzamos el movimiento continuo
+function animateGallery() {
+    const originalWidth = getOriginalWidth();
+    if (!originalWidth) return;
+
+    currentOffset -= speed;
+
+    if (Math.abs(currentOffset) >= originalWidth) {
+        currentOffset = 0;
+    }
+
+    grid.style.transform = `translateX(${currentOffset}px)`;
+    animationId = requestAnimationFrame(animateGallery);
+}
+
+function setupGallery() {
+    cancelAnimationFrame(animationId);
+
+    removeClones();
+    currentOffset = 0;
+    grid.style.transform = 'translateX(0)';
+
+    speed = window.innerWidth <= 768 ? 0.12 : 0.30;
+
+    cloneCards();
+
+    requestAnimationFrame(() => {
+        requestAnimationFrame(() => {
+            animateGallery();
+        });
+    });
+}
+
+function waitForImagesAndStart() {
+    const images = Array.from(
+        grid.querySelectorAll('.certificado-card img')
+    );
+
+    let loaded = 0;
+
+    function done() {
+        loaded++;
+        if (loaded === images.length) {
+            setupGallery();
+        }
+    }
+
+    if (!images.length) {
+        setupGallery();
+        return;
+    }
+
+    images.forEach(img => {
+        if (img.complete) {
+            done();
+        } else {
+            img.addEventListener('load', done, { once: true });
+            img.addEventListener('error', done, { once: true });
+        }
+    });
+}
+
+window.addEventListener('load', waitForImagesAndStart);
+
+let resizeTimeout;
+window.addEventListener('resize', () => {
+    clearTimeout(resizeTimeout);
+    resizeTimeout = setTimeout(setupGallery, 200);
+});

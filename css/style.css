@@ -999,7 +999,7 @@ a {
 }
 
 .certificado-card {
-    background-color: #1a1a1a00;
+    background-color: rgba(255, 255, 255, 0.01);
     color: white;
     width: 450px;
     height: 400px;
@@ -1009,53 +1009,99 @@ a {
     text-align: center;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    transition: transform 0.5s ease;
+    justify-content: flex-start;
+    flex-shrink: 0;
+    transition: transform 0.35s ease;
 }
 
-.certificado-card:hover {
-    transform: scale(1.05);
-    /* Efecto al pasar el ratón */
+.certificado-card__image {
+    position: relative;
+    width: 100%;
+    height: 300px;
+    padding: 0.75rem;
+    box-sizing: border-box;
+    background: #111;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
 }
 
 .certificado-card__image img {
     width: 100%;
-    height: 300px;
-    margin-top: 20px;
-    object-fit: cover;
-    /* Asegura que la imagen se ajuste bien */
+    height: 100%;
+    object-fit: contain;
+    object-position: center;
+    display: block;
+    border-radius: 8px;
 }
 
-.certificado-card__content {
-    padding: 0;
-
-}
-
-.certificado-card__title {
-    font-size: 1.1rem;
-    font-weight: bold;
-    margin-top: 1rem;
-}
-
-/* Estilo para los puntos de navegación */
-.certificados__nav {
-    display: flex;
-    justify-content: center;
-    gap: 10px;
-    margin-top: 10px;
-}
-
-
-/* Responsividad para pantallas pequeñas */
-@media (max-width: 768px) {
-    .certificados__grid {
-        flex-direction: column;
-        align-items: center;
+/* Tablet */
+@media (max-width: 1024px) {
+    .certificados__slider {
+        width: 90%;
     }
 
     .certificado-card {
-        width: 80%;
+        width: 380px;
+        height: 350px;
+    }
+
+    .certificado-card__image {
+        height: 240px;
+    }
+}
+
+/* Celular */
+@media (max-width: 768px) {
+    .certificados {
+        padding: 2.2rem 0.8rem;
+    }
+
+    .certificados__slider {
+        width: 100%;
+        max-width: 280px;
+        margin: 0 auto;
+    }
+
+    .certificados__grid {
+        gap: 0;
+        margin-left: 0;
+        margin-top: 1rem;
+        align-items: stretch;
+    }
+
+    .certificado-card {
+        width: 100%;
+        min-width: 100%;
         height: auto;
+        border-radius: 14px;
+        padding: 0.55rem;
+        box-sizing: border-box;
+    }
+
+    .certificado-card__image {
+        height: 210px;
+        padding: 0.35rem;
+        border-radius: 10px;
+    }
+
+    .certificado-card__image img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        object-position: center;
+        display: block;
+    }
+
+    .certificado-card__content {
+        padding: 0.55rem 0.3rem 0.65rem;
+    }
+
+    .certificado-card__title {
+        font-size: 0.86rem;
+        line-height: 1.25;
+        margin: 0;
     }
 }
 
