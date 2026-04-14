@@ -62,7 +62,7 @@ function setupGallery() {
     currentOffset = 0;
     grid.style.transform = 'translateX(0)';
 
-    speed = window.innerWidth <= 768 ? 0.12 : 0.30;
+    speed = window.innerWidth <= 768 ? 0.6 : 0.50;
 
     cloneCards();
 
